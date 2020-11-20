@@ -119,14 +119,14 @@ workflows:
     jobs:
       - build
       - linting:
-        requires:
-          - build
-        filters:
-          branches:
-            only:
-              - development
-              - staging
-              - master
+          requires:
+            - build
+          filters:
+            branches:
+              only:
+                - development
+                - staging
+                - master
 
       - deploy-to-aws-s3:
           requires:
