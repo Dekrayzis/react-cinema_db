@@ -123,7 +123,7 @@ workflows:
 
       - deploy-to-aws-s3:
           requires:
-            - linting
+            - build
           filters:
             branches:
               only:
