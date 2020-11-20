@@ -40,8 +40,6 @@ jobs:
       - run:
           name: Run linting
           command: npm run lint
-     
-
 
   deploy-to-aws-s3:
     executor: app-executor
@@ -123,12 +121,12 @@ workflows:
       - linting:
         requires:
           - build
-          filters:
-            branches:
-              only:
-                - development
-                - staging
-                - master
+        filters:
+          branches:
+            only:
+              - development
+              - staging
+              - master
 
       - deploy-to-aws-s3:
           requires:
