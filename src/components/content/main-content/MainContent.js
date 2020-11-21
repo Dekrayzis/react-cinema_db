@@ -2,16 +2,40 @@ import React, { useState } from 'react';
 import './mainContent.scss';
 import Carousel from '../carousel/Carousel';
 import Paginate from './../paginate/Paginate';
+import Grid from '../grid/Grid';
 
 const images = [
   {
-    url: 'http://placehold.it/2500x1280'
+    url: 'http://placehold.it/2500x1280',
+    rating: 4.5
   },
   {
-    url: 'http://placehold.it/2500x1280'
+    url: 'http://placehold.it/2500x1280',
+    rating: 2.2
   },
   {
-    url: 'http://placehold.it/2500x1280'
+    url: 'http://placehold.it/2500x1280',
+    rating: 4.5
+  },
+  {
+    url: 'http://placehold.it/2500x1280',
+    rating: 5
+  },
+  {
+    url: 'http://placehold.it/2500x1280',
+    rating: 1.5
+  },
+  {
+    url: 'http://placehold.it/2500x1280',
+    rating: 4
+  },
+  {
+    url: 'http://placehold.it/2500x1280',
+    rating: 3.2
+  },
+  {
+    url: 'http://placehold.it/2500x1280',
+    rating: 2
   }
 ];
 const MainContent = () => {
@@ -33,7 +57,7 @@ const MainContent = () => {
           <Paginate currentPage={currentpage} totalPages={10} paginate={paginate} />
         </div>
       </div>
-      {/* Display grid component */}
+      <Grid images={images} />
     </div>
   );
 };
