@@ -1,0 +1,61 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  row-gap: 3rem;
+  column-gap: 2rem;
+  margin: 10px 25px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.grid-cell {
+  position: relative;
+  display: grid;
+  color: white;
+  height: 28vh;
+  width: 220px;
+  border-radius: 4px;
+  transition: all 500ms;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid red;
+
+  .grid-read-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+  }
+
+  &:hover {
+    transform: translateY(-3px) scale(1.1);
+
+    .grid-read-more {
+      visibility: visible;
+    }
+  }
+
+  .grid-detail {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    bottom: 0;
+    width: 100%;
+
+    .grid-detail-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      text-align: center;
+      color: white;
+    }
+
+    .grid-detail-rating {
+      padding-top: 4px;
+      display: flex;
+    }
+  }
+}
